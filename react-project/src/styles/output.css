@@ -639,6 +639,11 @@ video {
   line-height: 2.25rem;
 }
 
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .font-extrabold {
   font-weight: 800;
 }
@@ -659,39 +664,31 @@ body {
   overflow-x: hidden;
 }
 
-@media (max-width: 780px) {
-  .bars {
-    background-color: green;
-    height: 3px;
-    width: 30px;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-    transition: all ease-in-out 1s;
-  }
-
-  .toggle:hover .bars:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .toggle:hover .bars:nth-child(2) {
-    display: none;
-  }
-
-  .toggle:hover .bars:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
+.bars {
+  background-color: black;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  transition: all ease-in-out 1s;
 }
 
-@media (min-width: 640px) {
-  .sm\:flex {
-    display: flex;
-  }
+.toggle:hover .bars:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle:hover .bars:nth-child(2) {
+  display: none;
+}
+
+.toggle:hover .bars:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 @media (min-width: 768px) {
-  .md\:hidden {
-    display: none;
+  .md\:flex {
+    display: flex;
   }
 }
 
@@ -702,5 +699,10 @@ body {
 
   .lg\:hidden {
     display: none;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }

@@ -8,10 +8,10 @@ export default function Header() {
         <div className="bars"></div>
         <div className="bars"></div>
       </div>
-      <h1 className="text-3xl text-black font-['inter']  font-extrabold">
+      <h1 className="text-xl lg:text-3xl text-black font-['inter']  font-extrabold">
         SHOP.CO
       </h1>
-      <nav className="flex md:hidden lg:flex">
+      <nav className="hidden lg:flex">
         <ul className="flex gap-3">
           <li>
             <select>
@@ -27,7 +27,7 @@ export default function Header() {
 
       <input
         type="search"
-        className="bg-[rgb(240,240,240)]  w-64  px-6 py-1 rounded-xl outline-none"
+        className="bg-[rgb(240,240,240)]  w-64  px-6 py-1 rounded-xl outline-none hidden md:flex"
         placeholder="Search..."
       />
       <div className="flex p-2 justify-evenly gap-2">
