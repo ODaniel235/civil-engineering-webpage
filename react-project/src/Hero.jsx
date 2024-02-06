@@ -1,8 +1,8 @@
 export default function Hero() {
   return (
     <>
-      <section className="flex flex-col-reverse lg:flex-row w-screen h-screen p-8 lg:-12 z-0">
-        <article className="flex w-6/12 flex-wrap flex-col gap-2">
+      <section className="flex flex-col-reverse lg:flex-row w-screen h-screen px-8 lg:py-5 z-0 justify-center">
+        <article className="flex w-[90%] flex-wrap flex-col gap-2 lg:6/2">
           <h1 className="text-3xl lg:text-6xl font-['inter'] font-extrabold">
             FIND CLOTHES THAT MATCHES YOUR LIFESTYLE
           </h1>
@@ -15,7 +15,7 @@ export default function Hero() {
             Shop Now
           </button>
         </article>
-        <article className="w-6/12 bg-[url('./Vector.png')] bg-no-repeat">
+        <article className="w-[90%] lg:w-6/12 bg-[url('./Vector.png')] bg-no-repeat">
           <img
             className=" rounded-full border-2 border-black "
             src="./Hero-bg.png"
