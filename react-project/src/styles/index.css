@@ -11,23 +11,21 @@ body {
 
 .bars {
   background-color: black;
-  height: 3px;
+  height: 6px;
   width: 30px;
-  margin: 0 4px;
   border-radius: 5px;
-  padding: 5px;
-  margin: 5px;
+  margin: 6px 0px;
   transition: all ease-in-out 1s;
 }
 
-.toggle:hover .bars:nth-child(1) {
+.toggle.show:hover .bars:nth-child(1) {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-.toggle:hover .bars:nth-child(2) {
+.toggle.show .bars:nth-child(2) {
   display: none;
 }
 
-.toggle:hover .bars:nth-child(3) {
+.toggle.show .bars:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
 }
