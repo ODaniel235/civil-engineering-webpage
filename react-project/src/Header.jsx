@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Hamburger from "./Hamburger";
 import "./styles/hamburger.css";
 export default function Header() {
   const [toggle, setToggle] = useState(true);
