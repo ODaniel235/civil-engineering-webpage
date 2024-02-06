@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <>
-      <section className="flex flex-col lg:flex-row w-screen h-screen px-8 lg:py-5 z-0 justify-center">
+      <section className="flex flex-col break-words lg:flex-row w-screen h-screen px-8 lg:py-5 z-0 justify-center mt-[-180px] gap-3">
         <article className="flex w-[90%] flex-wrap flex-col gap-2 lg:6/2">
           <h1 className="text-3xl lg:text-6xl font-['inter'] font-extrabold">
             FIND CLOTHES THAT MATCHES YOUR LIFESTYLE
