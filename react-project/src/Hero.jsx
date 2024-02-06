@@ -1,9 +1,9 @@
 export default function Hero() {
   return (
     <>
-      <section className="flex flex-col-reverse lg:flex-row w-screen h-screen p-12 z-0">
+      <section className="flex flex-col-reverse lg:flex-row w-screen h-screen p-8 lg:-12 z-0 mt-10">
         <article className="flex w-6/12 flex-wrap flex-col gap-2">
-          <h1 className=" text-6xl font-['inter'] font-extrabold">
+          <h1 className="text-3xl lg:text-6xl font-['inter'] font-extrabold">
             FIND CLOTHES THAT MATCHES YOUR LIFESTYLE
           </h1>
           <p className="text-md font-['inter'] py-2">
