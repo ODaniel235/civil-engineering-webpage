@@ -28,11 +28,15 @@ export default function Header() {
         placeholder="Search..."
       />
       <div
-        id="toggle"
-        className="toggle h-fit w-fit lg:hidden mr-[20px]"
         onClick={() => {
           toggle ? setToggle(false) : setToggle(true);
         }}
+        id="toggle"
+        className={
+          "toggle h-fit w-fit lg:hidden mr-[20px] " + (toggle
+            ? null
+            : "show")
+        }
       >
         <div className="bars"></div>
         <div className="bars"></div>

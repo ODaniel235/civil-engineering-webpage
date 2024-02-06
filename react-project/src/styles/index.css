@@ -15,7 +15,7 @@ body {
   width: 30px;
   border-radius: 5px;
   margin: 6px 0px;
-  transition: all ease-in-out 1s;
+  transition: 0.3s;
 }
 
 .toggle.show:hover .bars:nth-child(1) {
@@ -28,4 +28,23 @@ body {
 
 .toggle.show .bars:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+nav {
+  animation: header 0.4s ease-in-out;
+}
+
+@keyframes header {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(50px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
