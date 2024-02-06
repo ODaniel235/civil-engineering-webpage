@@ -1,9 +1,18 @@
 import { useState } from "react";
+import Hamburger from "./Hamburger";
+import "./styles/hamburger.css";
 export default function Header() {
   const [toggle, setToggle] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  const toggleHeader = () => {
+    setToggle(!toggle);
+  };
   return (
     <header className="flex h-fit w-screen bg-[rgb(255,255,255)] z-10 top-0 p-3 justify-between lg:justify-evenly lg:items-center shrink">
-      <h1 className="text-4xl lg:text-3xl text-black font-['inter']  font-extrabold">
+      <h1 className="text-3xl lg:text-3xl text-black font-['inter']  font-extrabold">
         SHOP.CO
       </h1>
       <nav className={toggle ? "hidden lg:flex" : "flex flex-col mt-12 mr-10"}>
@@ -28,19 +37,17 @@ export default function Header() {
         placeholder="Search..."
       />
       <div
+        className={`hamburger-container inline lg:hidden ${
+          isOpen ? "open" : ""
+        }`}
         onClick={() => {
-          toggle ? setToggle(false) : setToggle(true);
+          toggleMenu();
+          toggleHeader();
         }}
-        id="toggle"
-        className={
-          "toggle h-fit w-fit lg:hidden mr-[20px] " + (toggle
-            ? null
-            : "show")
-        }
       >
-        <div className="bars"></div>
-        <div className="bars"></div>
-        <div className="bars"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
       </div>
       <div className="lg:p-2 hidden lg:flex justify-evenly gap-2">
         <button className=" lg:hidden">
