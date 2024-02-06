@@ -18,7 +18,7 @@ body {
 }
 
 .toggle.show:hover .bars:nth-child(1) {
-  transform: rotate(-45deg) ;
+  transform: rotate(-45deg);
 }
 
 .toggle.show .bars:nth-child(2) {
@@ -26,7 +26,7 @@ body {
 }
 
 .toggle.show .bars:nth-child(3) {
-  transform: rotate(45deg) ;
+  transform: rotate(45deg);
 }
 
 nav {

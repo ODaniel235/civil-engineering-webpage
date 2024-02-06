@@ -18,23 +18,27 @@ export default function Header() {
         <ul
           className={"flex gap-3 " + (toggle ? null : "flex-col text-center")}
         >
-          <li>
-            <select>
+          <li className="text-xl">
+            <select className=" bg-inherit border-none">
               <option>Shop</option>
               <option>Sale</option>
             </select>
           </li>
-          <li>On Sale</li>
-          <li>New Arrivals</li>
-          <li className="">Brands</li>
+          <li className="text-xl">On Sale</li>
+          <li className="text-xl">New Arrivals</li>
+          <li className="text-xl">Brands</li>
         </ul>
       </nav>
 
-      <input
-        type="search"
-        className="bg-[rgb(240,240,240)]  w-64  px-6 py-1 rounded-xl outline-none hidden md:flex"
-        placeholder="Search..."
-      />
+      <div className="p-3 px-=8 bg-[rgb(240,240,240)] w-64 py-1 rounded-xl outline-none hidden md:flex gap-3">
+        <img src="./search.svg"  />
+        <input
+          type="search"
+          className="bg-[rgb(240,240,240)]  outline-none"
+          placeholder="Search..."
+        />
+      </div>
+
       <div
         className={`hamburger-container inline lg:hidden ${
           isOpen ? "open" : ""
