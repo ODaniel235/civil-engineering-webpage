@@ -1,4 +1,4 @@
-import Header from "./Header";
+/* import Header from "./Header";
 import Hero from "./Hero";
 import "./styles/output.css";
 function App() {
@@ -11,3 +11,4 @@ function App() {
 }
 
 export default App;
+ */
