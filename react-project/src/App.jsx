@@ -1,14 +1,19 @@
-/* import Header from "./Header";
-import Hero from "./Hero";
+import Header from "./Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./styles/output.css";
+
 function App() {
   return (
-    <div className="flex flex-col">
-      <Header />
-      <Hero />
-    </div>
+    <>
+      <BrowserRouter>
+        <Header>
+          <Routes>
+            
+          </Routes>
+        </Header>
+      </BrowserRouter>
+    </>
   );
 }
 
 export default App;
- */
