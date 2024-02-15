@@ -7,7 +7,7 @@ export default function Authentication(props) {
           Confused ?
         </button>
       </header>
-      <main className=" h-screen py-24 w-screen flex flex-wrap px-5 items-center justify-center">
+      <main className=" h-screen py-24 w-screen flex flex-wrap px-5 mt-14 justify-center">
         <div className="h-fit w-fit p-4 bg-white flex gap-6 flex-row flex-wrap rounded-2xl shadow-2xl shadow-gray-800">
           <label htmlFor="reg-number" className=" font-semibold">
             Reg Number
