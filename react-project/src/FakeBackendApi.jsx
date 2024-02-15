@@ -24,6 +24,21 @@ const civilEngineArray = [
     name: "Ashiwe Ikechukwu Praise",
     img: "zefra.jpg",
   },
+  {
+    regNum: "202330150080gf",
+    name: "Igbo Happiness",
+    img: "happiness.jpg",
+  },
+  {
+    regNum: "202331082984ef",
+    name: "Emmanuel Prince",
+    img: "emmanuel.jpg",
+  },
+  {
+    regNum: "202330657617ca",
+    name: "Isaiah Christopher Sunday",
+    img: "isaiah.jpg",
+  },
 ];
 
 export default civilEngineArray;
