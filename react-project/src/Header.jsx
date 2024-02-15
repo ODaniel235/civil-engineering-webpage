@@ -34,10 +34,10 @@ export default function Header() {
                 </Disclosure.Button>
               </div>
               <div className="flex flex-1 items-center justify-evenly sm:items-stretch sm:justify-between">
-                <div className="flex flex-shrink-0 items-center">
+                <div className="flex flex-shrink-0 items-center mb-[-5px]">
                   <img
                     className="h-9 w-auto rounded-full"
-                    src="uniport-logo.jpg"
+                    src="uniport-logo.png"
                     alt="Your Company"
                   />
                   <span className="px-2 text-white hidden sm:inline">
