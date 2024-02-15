@@ -9,14 +9,14 @@ function App() {
   const [index, setIndex] = useState(-1);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [regNumber, setRegNumber] = useState("");
-  const regNumberRegex = /[a-z]+\d*/gi;
+  const regNumberRegex = /[a-z0-9]+/gi;
   const handleChange = (e) => {
-    setRegNumber(e.target.value.match(regNumberRegex).join(""));
+    setRegNumber(e.target.value.match(regNumberRegex).join("").toLowerCase());
   };
 
   const changePage = () => {
     for (let i = 0; i < civilEngineArray.length; i++) {
-      if (civilEngineArray[i].name === regNumber) {
+      if (civilEngineArray[i].regNum === regNumber) {
         setIsLoggedIn(true);
         setIndex(i);
       }

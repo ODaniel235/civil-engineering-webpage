@@ -800,6 +800,10 @@ video {
   border-width: 2px;
 }
 
+.border-s {
+  border-inline-start-width: 1px;
+}
+
 .border-solid {
   border-style: solid;
 }
@@ -901,6 +905,14 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.font-\[\] {
+  font-family: ;
+}
+
+.font-\[\'Poppins\'\] {
+  font-family: 'Poppins';
 }
 
 .text-sm {
@@ -1024,6 +1036,7 @@ video {
 
 body {
   background-color: aliceblue;
+  overflow-x: hidden;
 }
 
 .hover\:bg-gray-700:hover {
