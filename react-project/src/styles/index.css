@@ -3,47 +3,5 @@
 @tailwind utilities;
 
 body {
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
-  background-color: rgb(242, 240, 241);
-}
-
-.bars {
-  background-color: black;
-  height: 3px;
-  width: 30px;
-  margin: 6px 0;
-  transition: 0.3s;
-}
-
-.toggle.show:hover .bars:nth-child(1) {
-  transform: rotate(-45deg);
-}
-
-.toggle.show .bars:nth-child(2) {
-  display: none;
-}
-
-.toggle.show .bars:nth-child(3) {
-  transform: rotate(45deg);
-}
-
-nav {
-  animation: header 0.4s ease-in-out;
-}
-
-@keyframes header {
-  0% {
-    transform: translateY(-200px);
-    opacity: 0;
-  }
-  80% {
-    transform: translateY(50px);
-    opacity: 0.7;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
+  background-color: aliceblue;
 }
