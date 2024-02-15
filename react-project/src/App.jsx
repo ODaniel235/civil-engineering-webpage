@@ -11,7 +11,7 @@ function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [regNumber, setRegNumber] = useState("");
   const regNumberRegex = /[a-z0-9]+/gi;
-  const [chechValue, setCheckValue] = useState(false);
+  const [checkValue, setCheckValue] = useState(false);
   const [justCheck, setJustCheck] = useState(true);
   const handleChange = (e) => {
     setRegNumber(e.target.value.match(regNumberRegex).join("").toLowerCase());
@@ -45,7 +45,7 @@ function App() {
             </Routes>
           </Header>
         </BrowserRouter>
-      ) : chechValue == true && justCheck == true ? (
+      ) : checkValue == true && justCheck == true ? (
         <FailedAuthentication goBack={goBack} />
       ) : (
         <Authentication handleChange={handleChange} changeLogs={changePage} />

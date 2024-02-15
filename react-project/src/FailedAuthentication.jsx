@@ -25,7 +25,7 @@ export default function FailedAuthentication(props) {
                 href="https://wa.me/+2348143709885"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:cursor-pointer"
+                className="hover:cursor-pointer animate-pulse"
               >
                 Dan
               </a>
@@ -36,14 +36,17 @@ export default function FailedAuthentication(props) {
                 href="https://wa.me/+2349039451869"
                 target="_blank"
                 rel="noreferrer"
-                className="hover:cursor-pointer"
+                className="hover:cursor-pointer animate-pulse"
               >
                 Isaiah
               </a>
             </strong>{" "}
             to gain access to the web
           </p>
-          <button onClick={props.goBack} className=" px-4 bg-gray-800 rounded-full py-2 text-white shadow-lg">
+          <button
+            onClick={props.goBack}
+            className=" px-4 bg-gray-800 rounded-full py-2 text-white shadow-lg"
+          >
             Back
           </button>
         </div>
