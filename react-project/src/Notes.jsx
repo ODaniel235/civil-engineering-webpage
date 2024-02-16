@@ -14,7 +14,7 @@ export default function NotePage() {
               alt={note.name}
               height={120}
               width={120}
-              className=" max-h-[80] max-w-[80] animate-bounce"
+              className=" max-h-[80] max-w-[80]"
             />
             <h1 className="font-semibold font-['Poppins'] text-gray-800">
               {note.name}
