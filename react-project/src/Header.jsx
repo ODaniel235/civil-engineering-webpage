@@ -4,10 +4,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 
 const navigation = [
-  { name: "Dashboard", href: "/check" },
+  { name: "Dashboard", href: "/assign" },
   { name: "Assignments", href: "/employees" },
-  { name: "TimeTable", href: "/drink" },
-  { name: "Infos", href: "/food" },
+  { name: "Notes", href: "/notes" },
+  { name: "Infos", href: "/infos" },
 ];
 
 function classNames(...classes) {
@@ -157,6 +157,11 @@ export default function Header(props) {
               ))}
             </div>
           </Disclosure.Panel>
+          <div className="bg-[aliceblue]">
+            <div className="App min-h-screen p-2 max-w-7xl mx-auto">
+              {props.children}
+            </div>
+          </div>
         </>
       )}
     </Disclosure>

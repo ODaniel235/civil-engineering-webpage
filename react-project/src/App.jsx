@@ -1,10 +1,12 @@
 import Header from "./Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Authentication from "./Authentication";
+import NotePage from "./Notes";
+import FailedAuthentication from "./FailedAuthentication";
 import civilEngineArray from "./FakeBackendApi";
 import "./styles/output.css";
 import { useState } from "react";
-import FailedAuthentication from "./FailedAuthentication";
+import Notes from "./NotesCover";
 
 function App() {
   const [index, setIndex] = useState(-1);
@@ -13,19 +15,26 @@ function App() {
   const regNumberRegex = /[a-z0-9]+/gi;
   const [checkValue, setCheckValue] = useState(false);
   const [justCheck, setJustCheck] = useState(true);
+
   const handleChange = (e) => {
-    setRegNumber(e.target.value.match(regNumberRegex).join("").toLowerCase());
+    setRegNumber(
+      e.target.value.match(regNumberRegex)?.join("").toLowerCase() ?? ""
+    );
   };
 
   const changePage = () => {
+    let found = false;
     for (let i = 0; i < civilEngineArray.length; i++) {
       if (civilEngineArray[i].regNum === regNumber) {
         setIsLoggedIn(true);
         setJustCheck(false);
         setIndex(i);
-      } else {
-        setCheckValue(true);
+        found = true;
+        break; // Once found, no need to continue loop
       }
+    }
+    if (!found) {
+      setCheckValue(true);
     }
   };
 
@@ -36,21 +45,19 @@ function App() {
   };
 
   return (
-    <>
+    <BrowserRouter>
       {isLoggedIn ? (
-        <BrowserRouter>
-          <Header img={civilEngineArray[index].img}>
-            <Routes>
-              <Route></Route>
-            </Routes>
-          </Header>
-        </BrowserRouter>
-      ) : checkValue == true && justCheck == true ? (
+        <Header img={civilEngineArray[index].img}>
+          <Routes>
+            <Route path="/notes" element={<NotePage />} />
+          </Routes>
+        </Header>
+      ) : checkValue && justCheck ? (
         <FailedAuthentication goBack={goBack} />
       ) : (
         <Authentication handleChange={handleChange} changeLogs={changePage} />
       )}
-    </>
+    </BrowserRouter>
   );
 }
 
