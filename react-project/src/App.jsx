@@ -50,6 +50,9 @@ function App() {
         <Header img={civilEngineArray[index].img}>
           <Routes>
             <Route path="/notes" element={<NotePage />} />
+            <Route path='/infos' element={<NotePage />} />
+            <Route path='/check' element={<NotePage />} />
+            <Route path='/dashboard' element={<NotePage />} />
           </Routes>
         </Header>
       ) : checkValue && justCheck ? (
