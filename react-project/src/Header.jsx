@@ -37,7 +37,7 @@ export default function Header(props) {
                 <div className="flex flex-shrink-0 items-center mb-[-5px]">
                   <img
                     className="h-9 w-auto rounded-full"
-                    src="uniport-logo.png"
+                    src="unport(2)logo.png"
                     alt="Your Company"
                   />
                   <span className="px-2 text-white hidden sm:inline">
@@ -92,7 +92,7 @@ export default function Header(props) {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href=""
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
@@ -105,20 +105,7 @@ export default function Header(props) {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
-                            className={classNames(
-                              active ? "bg-gray-100" : "",
-                              "block px-4 py-2 text-sm text-gray-700"
-                            )}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
+                            href=""
                             className={classNames(
                               active ? "bg-gray-100" : "",
                               "block px-4 py-2 text-sm text-gray-700"
