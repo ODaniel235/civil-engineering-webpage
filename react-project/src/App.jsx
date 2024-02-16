@@ -22,8 +22,9 @@ function App() {
     );
   };
 
-  const changePage = () => {
+  const changePage = (e) => {
     let found = false;
+    e.preventDefault()
     for (let i = 0; i < civilEngineArray.length; i++) {
       if (civilEngineArray[i].regNum === regNumber) {
         setIsLoggedIn(true);
