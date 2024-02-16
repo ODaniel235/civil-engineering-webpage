@@ -5,7 +5,7 @@ import NotePage from "./Notes";
 import FailedAuthentication from "./FailedAuthentication";
 import civilEngineArray from "./FakeBackendApi";
 import "./styles/output.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [index, setIndex] = useState(-1);
@@ -28,6 +28,7 @@ function App() {
       if (civilEngineArray[i].regNum === regNumber) {
         setIsLoggedIn(true);
         setJustCheck(false);
+        setCheckValue(false)
         setIndex(i);
         found = true;
         break;
@@ -43,10 +44,15 @@ function App() {
     setCheckValue(false);
     setJustCheck(true);
   };
+  const isLoggedFunction = ()=>{
+    setIsLoggedIn(true)
+    setJustCheck(false);
+    setCheckValue(false);
+  }
 
   return (
-    <BrowserRouter basename="/notes">
-      <Header img={isLoggedIn ? civilEngineArray[index].img : ""}>
+    <BrowserRouter>
+      <Header img={isLoggedIn ? civilEngineArray[index].img : ""} isLoggedFunction={isLoggedFunction}>
         <Routes>
           {isLoggedIn ? (
             <>
@@ -54,7 +60,7 @@ function App() {
               <Route path="/infos" element={<NotePage />} />
               <Route path="/check" element={<NotePage />} />
               <Route path="/dashboard" element={<NotePage />} />
-              <Route path="*" element={<Navigate to="/" />} />
+              <Route path="*" element={<Navigate to="/dashboard" />} />
             </>
           ) : (
             <Route
