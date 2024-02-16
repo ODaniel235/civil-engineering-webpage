@@ -45,7 +45,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/notes">
       <Header img={isLoggedIn ? civilEngineArray[index].img : ""}>
         <Routes>
           {isLoggedIn ? (
