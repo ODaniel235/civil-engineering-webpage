@@ -158,9 +158,7 @@ export default function Header(props) {
             </div>
           </Disclosure.Panel>
           <div className="bg-[aliceblue]">
-            <div className="App min-h-screen p-2 max-w-7xl mx-auto">
               {props.children}
-            </div>
           </div>
         </>
       )}
