@@ -21,7 +21,7 @@ export default function NotePage() {
             </h1>
             <p className="font-['Poppins']">{note.info}</p>
             <button className=" px-4 bg-gray-800 rounded-full py-2 text-white shadow-lg">
-              Check Notes
+              <a href={note.href}>Check Notes</a>
             </button>
           </div>
         ))}
