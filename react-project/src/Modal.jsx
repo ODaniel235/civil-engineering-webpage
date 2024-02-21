@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
+import Offcanvas from "react-bootstrap/Offcanvas";
+import BasicAccordion from "./Accordion";
 
 function ModalForm(props) {
   const [show, setShow] = useState(false);
@@ -11,32 +11,20 @@ function ModalForm(props) {
   return (
     <>
       <button
-        className=" bg-gray-800 text-white rounded-2xl p-2 text-nowrap px-3 "
+        className="p-2 px-3 bg-gray-800 text-white text-center rounded-2xl"
         onClick={handleShow}
       >
         View {props.title} Notes
       </button>
 
-      <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          I will not close if you click outside me. Do not even try to press
-          escape key.
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary">Understood</Button>
-        </Modal.Footer>
-      </Modal>
+      <Offcanvas show={show} onHide={handleClose} backdrop="static">
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>{props.title}</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+        <BasicAccordion/>
+        </Offcanvas.Body>
+      </Offcanvas>
     </>
   );
 }
