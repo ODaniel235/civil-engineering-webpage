@@ -1,26 +1,21 @@
+import Header from "./Header";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Authentication from "./Authentication";
 import NotePage from "./Notes";
 import FailedAuthentication from "./FailedAuthentication";
-import Header from "./Header";
 import civilEngineArray from "./FakeBackendApi";
 import "./styles/output.css";
-import { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function App() {
   const [index, setIndex] = useState(-1);
-  const [isLoggedIn, setIsLoggedIn] = useState(
-    localStorage.getItem("isLoggedIn") === "true"
-  );
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [regNumber, setRegNumber] = useState("");
   const regNumberRegex = /[a-z0-9]+/gi;
   const [checkValue, setCheckValue] = useState(false);
   const [justCheck, setJustCheck] = useState(true);
-
-  useEffect(() => {
-    // Save isLoggedIn state to localStorage
-    localStorage.setItem("isLoggedIn", isLoggedIn);
-  }, [isLoggedIn]);
 
   const handleChange = (e) => {
     setRegNumber(
@@ -51,7 +46,6 @@ function App() {
     setCheckValue(false);
     setJustCheck(true);
   };
-
   const isLoggedFunction = () => {
     setIsLoggedIn(true);
     setJustCheck(false);
@@ -83,6 +77,7 @@ function App() {
                   <Authentication
                     handleChange={handleChange}
                     changeLogs={changePage}
+                    value={regNumber}
                   />
                 )
               }

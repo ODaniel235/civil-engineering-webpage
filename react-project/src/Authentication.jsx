@@ -1,4 +1,6 @@
 export default function Authentication(props) {
+  const inputRegex = /[0-9]{12}[a-z]{2}/gi;
+  const checkRegex = /[0-9a-z]{1}/gi;
   return (
     <>
       <header className="fixed top-0 w-screen h-fit flex justify-center sm:justify-between px-12 bg-gray-800 items-center py-0">
@@ -18,7 +20,13 @@ export default function Authentication(props) {
           <input
             id="reg-number"
             type="text"
-            className=" w-[100%] outline-none border-solid border border-black rounded-xl p-2"
+            className={` w-[100%] border-solid border border-black rounded-xl p-2 ${
+              inputRegex.test(props.value)
+                ? "outline-green-500"
+                : !inputRegex.test(props.value) && checkRegex.test(props.value)
+                ? "outline-red-500"
+                : "outline-none"
+            }`}
             placeholder="DWS127-EF"
             onChange={props.handleChange}
           />
