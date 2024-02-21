@@ -7,12 +7,12 @@ function ModalForm(props) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   return (
     <>
       <button
         className="p-2 px-3 bg-gray-800 text-white text-center rounded-2xl"
-        onClick={handleShow}
+        onClick={props.findNote}
+        onMouseDown={handleShow}
       >
         View {props.title} Notes
       </button>
@@ -22,7 +22,7 @@ function ModalForm(props) {
           <Offcanvas.Title>{props.title}</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-        <BasicAccordion/>
+          <BasicAccordion iterate={props.iterate} />
         </Offcanvas.Body>
       </Offcanvas>
     </>
