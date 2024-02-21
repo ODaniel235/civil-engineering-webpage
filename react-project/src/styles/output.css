@@ -606,6 +606,11 @@ video {
   margin-right: auto;
 }
 
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
 .ml-6 {
   margin-left: 1.5rem;
 }

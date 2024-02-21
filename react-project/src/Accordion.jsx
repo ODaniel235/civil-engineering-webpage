@@ -10,8 +10,19 @@ function BasicAccordion(props) {
         </Accordion.Header>
         <Accordion.Body>
           {EachNoteMatch[props.iterate].nestedNote.infos}
+          <br />
+          <button className="p-2 px-3 bg-gray-800 text-white font-['Poppins'] text-center my-3 rounded-md">
+            <a
+              className=" no-underline text-white"
+              href={EachNoteMatch[props.iterate].nestedNote.href}
+              download
+            >
+              Download Now
+            </a>
+          </button>
         </Accordion.Body>
       </Accordion.Item>
+      {/* 
       <Accordion.Item eventKey="1">
         <Accordion.Header>Accordion Item #2</Accordion.Header>
         <Accordion.Body>
@@ -23,7 +34,7 @@ function BasicAccordion(props) {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
         </Accordion.Body>
-      </Accordion.Item>
+      </Accordion.Item> */}
     </Accordion>
   );
 }
