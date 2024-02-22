@@ -12,32 +12,32 @@ const civilEngineArray = [
   {
     regNum: "202330600672da",
     name: "George Odinachukwu Sixtus",
-    img: "sixtus.jpg",
+    img: "/pfp/sixtus.jpg",
   },
   {
     regNum: "202330831714ca",
     name: "Innocent Success Chukewuemeka",
-    img: "innocent.jpg",
+    img: "/pfp/innocent.jpg",
   },
   {
     regNum: "202330170644df",
     name: "Ashiwe Ikechukwu Praise",
-    img: "zefra.jpg",
+    img: "/pfp/zefra.jpg",
   },
   {
     regNum: "202330150080gf",
     name: "Igbo Happiness",
-    img: "happiness.jpg",
+    img: "/pfp/happiness.jpg",
   },
   {
     regNum: "202331082984ef",
     name: "Emmanuel Prince",
-    img: "emmanuel.jpg",
+    img: "/pfp/emmanuel.jpg",
   },
   {
     regNum: "202330657617ca",
     name: "Isaiah Christopher Sunday",
-    img: "isaiah.jpg",
+    img: "/pfp/isaiah.jpg",
   },
 ];
 

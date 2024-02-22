@@ -1,42 +1,14 @@
-import Accordion from "react-bootstrap/Accordion";
-import EachNoteMatch from "./EachNote";
+import PhysicsNote from "./PhysicsNotes";
+import Math101Notes from "./Math101Notes";
+import ChemistryNotes from "./ChemistryNotes";
+import Math102Notes from "./Math102Notes";
+import Ges101Notes from "./GES101Notes";
+import Ges101_1Notes from "./Ges101.1Notes";
+import Get111Notes from "./Get111";
+import CeeNotes from "./Cee";
 
 function BasicAccordion(props) {
-  return (
-    <Accordion defaultActiveKey="0">
-      <Accordion.Item eventKey="0">
-        <Accordion.Header>
-          {EachNoteMatch[props.iterate].nestedNote.first}
-        </Accordion.Header>
-        <Accordion.Body>
-          {EachNoteMatch[props.iterate].nestedNote.infos}
-          <br />
-          <button className="p-2 px-3 bg-gray-800 text-white font-['Poppins'] text-center my-3 rounded-md">
-            <a
-              className=" no-underline text-white"
-              href={EachNoteMatch[props.iterate].nestedNote.href}
-              download
-            >
-              Download Now
-            </a>
-          </button>
-        </Accordion.Body>
-      </Accordion.Item>
-      {/* 
-      <Accordion.Item eventKey="1">
-        <Accordion.Header>Accordion Item #2</Accordion.Header>
-        <Accordion.Body>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Accordion.Body>
-      </Accordion.Item> */}
-    </Accordion>
-  );
+  return (<>{props.title == "PHYSICS" ? <PhysicsNote /> : props.title == 'MATH101' ? <Math101Notes /> : props.title == 'MATH102' ? <Math102Notes /> : props.title == 'CHEMISTRY' ? <ChemistryNotes /> : props.title == 'GES101' ? <Ges101Notes /> : props.title == 'GES101.1' ? <Ges101_1Notes /> : props.title == 'GET111' ? <Get111Notes /> :  <CeeNotes />}</>);
 }
 
 export default BasicAccordion;

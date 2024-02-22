@@ -1055,6 +1055,7 @@ video {
 body {
   background-color: aliceblue;
   overflow-x: hidden;
+  font-family: "Poppins";
 }
 
 .hover\:cursor-pointer:hover {

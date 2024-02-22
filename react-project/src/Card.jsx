@@ -9,7 +9,7 @@ function CardCheck(props) {
       <Card.Body>
         <Card.Title>{props.title}</Card.Title>
         <Card.Text>{props.info}</Card.Text>
-        <ModalForm title={props.title} findNote={props.findNote} iterate={props.iterate}/>
+        <ModalForm title={props.title} />
       </Card.Body>
     </Card>
   );

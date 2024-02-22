@@ -4,15 +4,13 @@ import BasicAccordion from "./Accordion";
 
 function ModalForm(props) {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
     <>
       <button
         className="p-2 px-3 bg-gray-800 text-white text-center rounded-2xl"
-        onClick={props.findNote}
-        onMouseDown={handleShow}
+        onClick={handleShow}
       >
         View {props.title} Notes
       </button>
@@ -22,7 +20,7 @@ function ModalForm(props) {
           <Offcanvas.Title>{props.title}</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <BasicAccordion iterate={props.iterate} />
+          <BasicAccordion title={props.title}  />
         </Offcanvas.Body>
       </Offcanvas>
     </>
