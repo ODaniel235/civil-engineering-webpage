@@ -2,7 +2,8 @@ import PhysicsNote from "./PhysicsNotes";
 import Math101Notes from "./Math101Notes";
 import ChemistryNotes from "./ChemistryNotes";
 import Math102Notes from "./Math102Notes";
-import Ges101Notes from "./GES101Notes";
+import Ges101_1Notes from "./Ges101.1Notes";
+import Ges101Notes from "./Ges101Notes";
 import Get111Notes from "./Get111";
 import CeeNotes from "./Cee";
 
