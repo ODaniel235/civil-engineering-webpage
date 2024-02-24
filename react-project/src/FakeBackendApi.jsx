@@ -39,22 +39,28 @@ const civilEngineArray = [
     name: "Isaiah Christopher Sunday",
     img: "/pfp/isaiah.jpg",
   },
+  {
+    regNum: "202330431180ja",
+    name: "Chindah Joseph Chigozirim",
+    img: "/pfp/chindah.jpg",
+  },
+  {
+    regNum: "202330588960ha",
+    name: "Ihezou Daniel",
+    img: "/pfp/seconddaniel.jpg",
+  },
+  {
+    regNum: "202330262150cf",
+    name: "Edem Chizaram Daisy",
+    img: "/pfp/zara.jpg",
+  },
+  {
+    regNum: "202330480899bf",
+    name: "Israel Provost",
+    img: "/pfp/pere.jpg",
+  },
 ];
 
 export default civilEngineArray;
 
-export const ElectionBackend = [
-  {
-    name: "Ikediasor Justice Chidera",
-    role: "President",
-    manifesto: "To Be Announced",
-  },
-  { name: "Ugwech Emmanuel", role: "Provost", manifesto: "To Be Announced" },
-  {
-    name: "Nwachukwu Chukwukelu",
-    role: "Assistant Provost",
-    manifesto: "To Be Announced",
-  },
-];
 
-export const pictureArray = [];

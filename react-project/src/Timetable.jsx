@@ -1,5 +1,3 @@
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useState } from "react";
 
@@ -83,60 +81,59 @@ function TimetableModal() {
     setSelectedDay(indexSelected);
   };
   return (
-    <>
-      <div className=" p-2 text-center w-[90%] border-2 border-gray-800 rounded-2xl shadow-lg">
-        <h1 className="text-3xl font-bold mb-6">Timetable</h1>
-        <div className="flex justify-center flex-col gap-3 md:flex-row flex-wrap mb-2">
-          {days.map((day, index) => (
-            <>
-              <button
-                className={`px-4 py-2 mx-2 rounded-lg text-white font-semibold ${
-                  index === selectedDay
-                    ? "bg-gray-800"
-                    : "bg-gray-600 hover:bg-gray-700"
-                }`}
-                onClick={handleShow}
-                onMouseDown={() => changeIndex(index)}
-              >
-                {day}
-              </button>
-            </>
-          ))}
-        </div>
-
-        <Offcanvas show={show} onHide={handleClose} backdrop="static">
-          <Offcanvas.Header closeButton>
-            <Offcanvas.Title>{timetableData[selectedDay].day}</Offcanvas.Title>
-          </Offcanvas.Header>
-          <Offcanvas.Body>
-            <table className=" w-full">
-              <thead>
-                <tr>
-                  <th className="px-4 py-2 bg-gray-800 text-white hover:bg-gray-600 text-center">
-                    Time
-                  </th>
-                  <th className="px-4 py-2 bg-gray-800 text-white hover:bg-gray-600 text-center">
-                    Subject
-                  </th>
-                  <th className="px-4 py-2 bg-gray-800 text-white hover:bg-gray-600 text-center">
-                    Venue
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {timetableData[selectedDay].schedule.map((data, index) => (
-                  <tr key={index} className=" transition-all hover:bg-gray-200">
-                    <td className="border px-2 py-2">{data.time}</td>
-                    <td className="border px-2py-2">{data.subject}</td>
-                    <td className="border px-2 py-2">{data.venue}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </Offcanvas.Body>
-        </Offcanvas>
+    <div className="p-2 text-center w-[90%] border-2 border-gray-800 rounded-2xl shadow-lg">
+      <h1 className="text-3xl font-bold mb-6">Timetable</h1>
+      <div className="flex justify-center flex-col gap-3 md:flex-row flex-wrap mb-2">
+        {days.map((day, index) => (
+          <button
+            key={index}
+            className={`px-4 py-2 mx-2 rounded-lg text-white font-semibold ${
+              index === selectedDay
+                ? "bg-gray-800"
+                : "bg-gray-600 hover:bg-gray-700"
+            }`}
+            onClick={handleShow}
+            onMouseDown={()=>changeIndex(index)}
+          >
+            {day}
+          </button>
+        ))}
       </div>
-    </>
+
+      <Offcanvas show={show} onHide={handleClose} backdrop="static">
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>{timetableData[selectedDay]?.day}</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <table className="w-full">
+            <thead>
+              <tr>
+                <th className="px-4 py-2 bg-gray-800 text-white text-center">
+                  Time
+                </th>
+                <th className="px-4 py-2 bg-gray-800 text-white text-center">
+                  Subject
+                </th>
+                <th className="px-4 py-2 bg-gray-800 text-white text-center">
+                  Venue
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {timetableData[selectedDay]?.schedule.map((data, index) => (
+                <tr key={index} className="transition-all hover:bg-gray-200">
+                  <td className="border px-2 py-2 text-center">{data.time}</td>
+                  <td className="border px-2 py-2 text-center">
+                    {data.subject}
+                  </td>
+                  <td className="border px-2 py-2 text-center">{data.venue}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </Offcanvas.Body>
+      </Offcanvas>
+    </div>
   );
 }
 
