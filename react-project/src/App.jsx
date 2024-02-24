@@ -2,6 +2,7 @@ import Header from "./Header";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Authentication from "./Authentication";
 import NotePage from "./Notes";
+import "swiper/css";
 import FailedAuthentication from "./FailedAuthentication";
 import civilEngineArray from "./FakeBackendApi";
 import "./styles/output.css";
@@ -63,7 +64,7 @@ function App() {
           {isLoggedIn ? (
             <>
               <Route path="/notes" element={<NotePage />} />
-              <Route path="/infos" element={<Infos />} />
+              <Route path="/infos" element={<Infos exclude={index} />} />
               <Route path="/check" element={<NotePage />} />
               <Route path="/dashboard" element={<NotePage />} />
               <Route path="*" element={<Navigate to="/dashboard" />} />
