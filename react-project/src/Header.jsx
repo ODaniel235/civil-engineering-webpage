@@ -49,7 +49,6 @@ export default function Header(props) {
                       <NavLink
                         key={item.name}
                         to={item.href}
-                        onClick={props.isLoggedFunction}
                         className={({ isActive }) => {
                           return (
                             "rounded-md px-3 py-2 text-sm font-medium no-underline " +
@@ -141,7 +140,7 @@ export default function Header(props) {
               ))}
             </div>
           </Disclosure.Panel>
-          <div className="bg-[aliceblue]">{props.children}</div>
+          <div className="bg-[aliceblue] h-fit w-fit">{props.children}</div>
         </>
       )}
     </Disclosure>

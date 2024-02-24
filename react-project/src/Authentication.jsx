@@ -1,5 +1,5 @@
 export default function Authentication(props) {
-  const inputRegex = /[0-9]{12}[a-z]{2}/gi;
+  const inputRegex = /[0-9]{12}[a-z]{2}/g;
   const checkRegex = /[0-9a-z]{1}/gi;
   return (
     <>
@@ -22,7 +22,7 @@ export default function Authentication(props) {
             type="text"
             className={` w-[100%] border-solid border border-black rounded-xl p-2 ${
               inputRegex.test(props.value)
-                ? "outline-green-500"
+                ? "border-green-500 outline-green-500"
                 : !inputRegex.test(props.value) && checkRegex.test(props.value)
                 ? "outline-red-500"
                 : "outline-none"

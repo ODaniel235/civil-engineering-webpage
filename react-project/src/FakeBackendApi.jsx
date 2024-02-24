@@ -42,3 +42,19 @@ const civilEngineArray = [
 ];
 
 export default civilEngineArray;
+
+export const ElectionBackend = [
+  {
+    name: "Ikediasor Justice Chidera",
+    role: "President",
+    manifesto: "To Be Announced",
+  },
+  { name: "Ugwech Emmanuel", role: "Provost", manifesto: "To Be Announced" },
+  {
+    name: "Nwachukwu Chukwukelu",
+    role: "Assistant Provost",
+    manifesto: "To Be Announced",
+  },
+];
+
+export const pictureArray = [];
