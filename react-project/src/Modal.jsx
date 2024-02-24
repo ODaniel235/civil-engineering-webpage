@@ -15,12 +15,17 @@ function ModalForm(props) {
         View {props.title} Notes
       </button>
 
-      <Offcanvas show={show} onHide={handleClose} backdrop="static">
+      <Offcanvas
+        data-bs-theme="dark"
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+      >
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>{props.title}</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          <BasicAccordion title={props.title}  />
+          <BasicAccordion title={props.title} />
         </Offcanvas.Body>
       </Offcanvas>
     </>

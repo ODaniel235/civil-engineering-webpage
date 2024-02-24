@@ -8,6 +8,7 @@ import "./styles/output.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Infos from "./Infos";
 
 function App() {
   const [index, setIndex] = useState(-1);
@@ -62,7 +63,7 @@ function App() {
           {isLoggedIn ? (
             <>
               <Route path="/notes" element={<NotePage />} />
-              <Route path="/infos" element={<NotePage />} />
+              <Route path="/infos" element={<Infos />} />
               <Route path="/check" element={<NotePage />} />
               <Route path="/dashboard" element={<NotePage />} />
               <Route path="*" element={<Navigate to="/dashboard" />} />

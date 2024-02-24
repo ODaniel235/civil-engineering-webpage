@@ -10,7 +10,10 @@ export default function Authentication(props) {
         </button>
       </header>
       <main className=" h-screen py-24 w-screen flex flex-wrap px-5  justify-center">
-        <div className="h-fit w-fit p-4 bg-white flex gap-6 flex-col justify-center flex-wrap rounded-2xl shadow-lg  shadow-gray-800">
+        <form
+          onSubmit={props.changeLogs}
+          className="h-fit w-fit p-4 bg-white flex gap-6 flex-col justify-center flex-wrap rounded-2xl shadow-lg  shadow-gray-800"
+        >
           <label
             htmlFor="reg-number"
             className=" font-semibold font-['Poppins']"
@@ -31,12 +34,12 @@ export default function Authentication(props) {
             onChange={props.handleChange}
           />
           <button
+            type="submit"
             className=" px-4 bg-gray-800 rounded-full py-2 text-white shadow-lg"
-            onClick={props.changeLogs}
           >
             Authenticate
           </button>
-        </div>
+        </form>
       </main>
     </>
   );
