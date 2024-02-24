@@ -23,7 +23,7 @@ function App() {
           />
           <Route path="*" element={<Navigate to="/dashboard" />} />
           <Route path="/check" element={<NotePage />} />
-          <Route path="/infos" element={<Infos />} />
+          <Route path="/infos" element={<Infos index={selectedIndex} />} />
           <Route path="/notes" element={<NotePage />} />
         </Routes>
       </Header>

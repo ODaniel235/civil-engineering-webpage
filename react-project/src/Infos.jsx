@@ -1,4 +1,5 @@
-export default function Infos() {
+export default function Infos(props) {
+  alert(props.index)
   return (
     <>
       <main className="w-screen h-screen flex flex-col items-center">
