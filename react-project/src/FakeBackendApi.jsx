@@ -5,11 +5,6 @@ const civilEngineArray = [
     img: "uniport-logo.png",
   },
   {
-    regNum: "test123",
-    name: "testCase",
-    img: "uniport-logo.png",
-  },
-  {
     regNum: "202330600672da",
     name: "George Odinachukwu Sixtus",
     img: "/pfp/sixtus.jpg",
