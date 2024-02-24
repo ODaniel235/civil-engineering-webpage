@@ -84,7 +84,7 @@ function TimetableModal() {
   };
   return (
     <>
-      <div className="mx-auto p-2 text-center border-2 border-gray-800 rounded-2xl shadow-lg">
+      <div className=" p-2 text-center w-[90%] border-2 border-gray-800 rounded-2xl shadow-lg">
         <h1 className="text-3xl font-bold mb-6">Timetable</h1>
         <div className="flex justify-center flex-col gap-3 md:flex-row flex-wrap mb-2">
           {days.map((day, index) => (
