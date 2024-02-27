@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const navigation = [
   { name: "Dashboard", href: "/assign" },
@@ -15,6 +16,10 @@ function classNames(...classes) {
 }
 
 export default function Header(props) {
+  const [active, setActive] = useState(0);
+  const changeActive = (numberIndex) => {
+    setActive(numberIndex);
+  };
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -46,16 +51,17 @@ export default function Header(props) {
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                    {navigation.map((item, index) => (
                       <NavLink
                         key={item.name}
                         to={item.href}
-                        className={({ isActive }) => {
+                        onClick={() => changeActive(index)}
+                        className={() => {
                           return (
                             "rounded-md px-3 py-2 text-sm font-medium no-underline " +
-                            (!isActive
-                              ? "text-gray-300 hover:bg-gray-700 hover:text-white"
-                              : "bg-gray-900 text-white")
+                            (active == index
+                              ? "bg-gray-900 text-white"
+                              : "text-gray-300 hover:bg-gray-700 hover:text-white")
                           );
                         }}
                       >
@@ -137,17 +143,18 @@ export default function Header(props) {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
+              {navigation.map((item, index) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"
                   href={item.href}
-                  className={({ isActive }) => {
+                  onClick={() => changeActive(index)}
+                  className={() => {
                     return (
                       "rounded-md px-3 py-2 text-sm font-medium no-underline " +
-                      (!isActive
-                        ? "text-gray-300 hover:bg-gray-700 hover:text-white"
-                        : "bg-gray-900 text-white")
+                      (active == index
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white")
                     );
                   }}
                   aria-current={item.current ? "page" : undefined}
