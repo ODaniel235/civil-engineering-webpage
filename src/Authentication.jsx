@@ -35,7 +35,7 @@ export default function Authentication(props) {
           />
           <button
             type="submit"
-            className=" px-4 bg-gray-800 rounded-full py-2 text-white shadow-lg"
+            className=" px-4 bg-gray-800 rounded-full py-2 text-white shadow-lg hover:scale-105 hover:bg-gray-900 transition-all duration-300"
           >
             Authenticate
           </button>

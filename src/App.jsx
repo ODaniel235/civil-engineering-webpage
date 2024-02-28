@@ -67,7 +67,7 @@ function App() {
               <Route path="/infos" element={<Infos exclude={index} />} />
               <Route path="/check" element={<NotePage />} />
               <Route path="/dashboard" element={<NotePage />} />
-              <Route path="*" element={<Navigate to="/dashboard" />} />
+              <Route path="*" element={<Navigate to="/infos" />} />
             </>
           ) : (
             <Route
