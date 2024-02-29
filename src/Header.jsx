@@ -3,7 +3,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
-
+//adding files to push
 const navigation = [
   { name: "Infos", href: "/infos" },
   { name: "Notes", href: "/notes" },
