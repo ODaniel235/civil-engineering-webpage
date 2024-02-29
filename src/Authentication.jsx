@@ -1,6 +1,16 @@
+import { useState } from "react";
+
 export default function Authentication(props) {
   const inputRegex = /[0-9]{12}[a-z]{2}/g;
   const checkRegex = /[0-9a-z]{1}/gi;
+  const [label, setLabel] = useState(true);
+  const setLabelFunction = () => {
+    inputRegex.test(props.value)
+      ? setLabel(true)
+      : !inputRegex.test(props.value) && checkRegex.test(props.value)
+      ? setLabel(false)
+      : null;
+  };
   return (
     <>
       <header className="fixed h-fit top-0 w-screen flex justify-center sm:justify-between px-12 bg-gray-800 items-center">
@@ -20,19 +30,30 @@ export default function Authentication(props) {
           >
             Reg Number
           </label>
-          <input
-            id="reg-number"
-            type="text"
-            className={` w-[100%] border-solid border border-black rounded-xl p-2 ${
-              inputRegex.test(props.value)
-                ? "border-green-500 outline-green-500"
-                : !inputRegex.test(props.value) && checkRegex.test(props.value)
-                ? "outline-red-500"
-                : "outline-none"
-            }`}
-            placeholder="DWS127-EF"
-            onChange={props.handleChange}
-          />
+          <div>
+            <input
+              id="reg-number"
+              type="text"
+              className={` w-[100%] border-solid border border-black rounded-xl p-2 ${
+                inputRegex.test(props.value)
+                  ? "border-green-500 outline-green-500"
+                  : !inputRegex.test(props.value) &&
+                    checkRegex.test(props.value)
+                  ? "outline-red-500"
+                  : "outline-none"
+              }`}
+              placeholder="DWS127-EF"
+              onChange={setLabelFunction}
+            />
+
+            <p
+              className={`text-sm text-red-600 ml-2 ${
+                label ? " hidden" : "visible"
+              }`}
+            >
+              Reg Number is not valid
+            </p>
+          </div>
           <button
             type="submit"
             className=" px-4 bg-gray-800 rounded-full py-2 text-white shadow-lg hover:scale-105 hover:bg-gray-900 transition-all duration-300"

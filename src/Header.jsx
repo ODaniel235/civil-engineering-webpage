@@ -8,11 +8,6 @@ const navigation = [
   { name: "Infos", href: "/infos" },
   { name: "Notes", href: "/notes" },
 ];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export default function Header(props) {
   const [active, setActive] = useState(0);
 
