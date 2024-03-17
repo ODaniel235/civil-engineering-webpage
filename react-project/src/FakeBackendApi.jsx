@@ -1,7 +1,7 @@
 const civilEngineArray = [
   {
-    regNum: "202331138825EF",
-    name: "Daniel",
+    regNum: "testtest123",
+    name: "testserver",
     img: "uniport-logo.png",
   },
   {
