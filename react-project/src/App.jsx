@@ -11,7 +11,7 @@ import { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Infos from "./Infos";
 
-function App() {
+function App() {/*
   const [index, setIndex] = useState(-1);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [regNumber, setRegNumber] = useState("");
@@ -53,8 +53,8 @@ function App() {
     setJustCheck(false);
     setCheckValue(false);
   };
-
-  return (
+*/
+  return (/*
     <BrowserRouter>
       <Header
         img={isLoggedIn ? civilEngineArray[index].img : ""}
@@ -86,6 +86,8 @@ function App() {
         </Routes>
       </Header>
     </BrowserRouter>
+*/
+<h1>This web is currently down for reasons best known to the developer</h1>
   );
 }
 
