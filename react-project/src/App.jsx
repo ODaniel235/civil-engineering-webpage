@@ -89,7 +89,7 @@ function App() {/*
 */
 <BrowserRouter>
 <Header img="" isLoggedFunction={()=>console.log('yes')}>
-<p class name="text-2xl bg-gray-800 mx-auto text-center my-auto">This web is currently down for reasons best known to the developer</p>
+<p className="text-2xl bg-gray-800 mx-auto text-center my-auto">This web is currently down for reasons best known to the developer</p>
 </Header>
 </BrowserRouter>
   );
