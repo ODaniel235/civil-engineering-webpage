@@ -86,8 +86,9 @@ function App() {/*
         </Routes>
       </Header>
     </BrowserRouter>
-*/
-<h1>This web is currently down for reasons best known to the developer</h1>
+*/<Header>
+<p class name="text-2xl bg-gray-800 mx-auto text-center my-auto">This web is currently down for reasons best known to the developer</p>
+</Header>
   );
 }
 
