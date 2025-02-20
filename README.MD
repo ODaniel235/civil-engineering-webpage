@@ -1,1 +1,1 @@
-Discontinued this project 
+Project discontinued due to discontinued collaboration 
